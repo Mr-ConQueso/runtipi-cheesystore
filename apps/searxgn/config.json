@@ -1,0 +1,25 @@
+{
+  "name": "SearXNG",
+  "id": "searxng",
+  "available": true,
+  "short_desc": "Privacy-respecting, hackable metasearch engine.",
+  "author": "searxng",
+  "port": 8383,
+  "categories": [
+    "utilities",
+    "data"
+  ],
+  "description": "SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.",
+  "tipi_version": 1,
+  "version": "v1.0.1",
+  "source": "https://github.com/searxng/searxng",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1745082405284,
+  "updated_at": 1745674974072,
+  "dynamic_config": true,
+  "form_fields": []
+}

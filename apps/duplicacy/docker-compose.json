@@ -1,55 +1,33 @@
 {
-    "services": [
-      {
-        "name": "stash",
-        "image": "stashapp/stash:latest",
-        "isMain": true,
-        "internalPort": "8080",
-        "environment": {
-            "STASH_STASH": "/data/",
-            "STASH_GENERATED": "/generated/",
-            "STASH_METADATA": "/metadata/",
-            "STASH_CACHE": "/cache/"
-        },
-        "volumes": [
-          {
-            "hostPath": "/etc/localtime",
-            "containerPath": "/etc/localtime:ro"
-          },
-          {
-            "hostPath": "${APP_DATA_DIR}/config",
-            "containerPath": "/root/.stash"
-          },
-          {
-            "hostPath": "${APP_DATA_DIR}/metadata",
-            "containerPath": "/metadata"
-          },
-          {
-            "hostPath": "${APP_DATA_DIR}/blobs",
-            "containerPath": "/blobs"
-          },
-          {
-            "hostPath": "${APP_DATA_DIR}/cache",
-            "containerPath": "/cache"
-          },
-          {
-            "hostPath": "${ROOT_FOLDER_HOST}/media/data/videos/stash",
-            "containerPath": "/data"
-          },
-          {
-            "hostPath": "${ROOT_FOLDER_HOST}/media/data/videos/stash/generated",
-            "containerPath": "/generated"
-          }
-        ],
-        "logging":
+  "$schema": "../dynamic-compose-schema.json",
+  "services": [
+    {
+      "name": "duplicacy",
+      "image": "erichough/duplicacy",
+      "isMain": true,
+      "environment": {
+        "TZ": "Europe/Madrid",
+        "MACHINE_ID": "9cae75c15552b6d8133ea80202cd1981"
+      },
+      "internalPort": 3875,
+      "volumes": [
         {
-            "driver": "json-file",
-            "options":
-              {
-                "max-file": "10",
-                "max-size": "2m"
-              }
+          "hostPath": "${APP_DATA_DIR}/config",
+          "containerPath": "/etc/duplicacy"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/cache",
+          "containerPath": "/var/cache/duplicacy"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/storage",
+          "containerPath": "/storage"
         }
-      }
-    ]
+      ],
+      "hostname": "duplicacy-web",
+      "capDrop": [
+        "ALL"
+      ]
+    }
+  ]
 }
