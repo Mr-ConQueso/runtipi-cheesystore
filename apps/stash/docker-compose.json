@@ -8,9 +8,9 @@
           "STASH_GENERATED": "/generated/",
           "STASH_METADATA": "/metadata/",
           "STASH_CACHE": "/cache/",
-          "STASH_PORT": "${APP_PORT}"
+          "STASH_PORT": 8998
         },
-        "internalPort": "${APP_PORT}",
+        "internalPort": 8998,
         "volumes": [
           {
             "hostPath": "/etc/localtime",
