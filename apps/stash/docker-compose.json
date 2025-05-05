@@ -1,54 +1,56 @@
 {
-    "services": [
-      {
-        "name": "stash",
-        "image": "stashapp/stash:latest",
-        "environment": {
-          "STASH_STASH": "/data/",
-          "STASH_GENERATED": "/generated/",
-          "STASH_METADATA": "/metadata/",
-          "STASH_CACHE": "/cache/",
-          "STASH_PORT": 8998
+  "$schema": "../dynamic-compose-schema.json",
+  "services": [
+    {
+      "name": "stash",
+      "image": "stashapp/stash:v0.28.1",
+      "isMain": true,
+      "environment": {
+        "STASH_STASH": "/data/",
+        "STASH_GENERATED": "/generated/",
+        "STASH_METADATA": "/metadata/",
+        "STASH_CACHE": "/cache/",
+        "STASH_PORT": 8998
+      },
+      "internalPort": 8998,
+      "volumes": [
+        {
+          "hostPath": "/etc/localtime",
+          "containerPath": "/etc/localtime",
+          "readOnly": true
         },
-        "internalPort": 8998,
-        "volumes": [
-          {
-            "hostPath": "/etc/localtime",
-            "containerPath": "/etc/localtime",
-            "readOnly": true
-          },
-          {
-            "hostPath": "${APP_DATA_DIR}/config",
-            "containerPath": "/root/.stash"
-          },
-          {
-            "hostPath": "${APP_DATA_DIR}/metadata",
-            "containerPath": "/metadata"
-          },
-          {
-            "hostPath": "${APP_DATA_DIR}/blobs",
-            "containerPath": "/blobs"
-          },
-          {
-            "hostPath": "${APP_DATA_DIR}/cache",
-            "containerPath": "/cache"
-          },
-          {
-            "hostPath": "${ROOT_FOLDER_HOST}/media/data/videos/stash",
-            "containerPath": "/data"
-          },
-          {
-            "hostPath": "${ROOT_FOLDER_HOST}/media/data/videos/stash/generated",
-            "containerPath": "/generated"
-          }
-        ],
-        "logging": {
-          "driver": "json-file",
-          "options": {
-            "max-file": "10",
-            "max-size": "2m"
-          }
+        {
+          "hostPath": "${APP_DATA_DIR}/config",
+          "containerPath": "/root/.stash"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/metadata",
+          "containerPath": "/metadata"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/blobs",
+          "containerPath": "/blobs"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/cache",
+          "containerPath": "/cache"
+        },
+        {
+          "hostPath": "${ROOT_FOLDER_HOST}/media/data/videos/stash",
+          "containerPath": "/data"
+        },
+        {
+          "hostPath": "${ROOT_FOLDER_HOST}/media/data/videos/stash/generated",
+          "containerPath": "/generated"
+        }
+      ],
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-file": "10",
+          "max-size": "2m"
         }
       }
-    ]
+    }
+  ]
 }
