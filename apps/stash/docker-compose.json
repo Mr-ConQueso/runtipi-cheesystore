@@ -9,7 +9,8 @@
             "STASH_STASH": "/data/",
             "STASH_GENERATED": "/generated/",
             "STASH_METADATA": "/metadata/",
-            "STASH_CACHE": "/cache/"
+            "STASH_CACHE": "/cache/",
+            "STASH_PORT": "${APP_PORT}"
         },
         "volumes": [
           {
