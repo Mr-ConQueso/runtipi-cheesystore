@@ -11,7 +11,7 @@
   ],
   "description": "Duplicacy is a new generation cross-platform cloud backup tool based on the idea of Lock-Free Deduplication.",
   "tipi_version": 2,
-  "version": "v1.0.1",
+  "version": "v1.0.2",
   "source": "https://github.com/gilbertchen/duplicacy",
   "exposable": true,
   "supported_architectures": [
