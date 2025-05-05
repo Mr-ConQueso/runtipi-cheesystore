@@ -1,21 +1,21 @@
 {
-  "name": "Stash",
-  "id": "stash",
+  "name": "Duplicacy",
+  "id": "duplicacy",
   "available": true,
-  "short_desc": "An organizer for your porn, written in Go.",
-  "author": "stashapp",
-  "port": 8382,
+  "short_desc": "A new generation cloud backup tool.",
+  "author": "gilbertchen",
+  "port": 8386,
   "categories": [
-    "media"
+    "utilities",
+    "data"
   ],
-  "description": "Stash is a self-hosted webapp written in Go which organizes and serves your porn.",
+  "description": "Duplicacy is a new generation cross-platform cloud backup tool based on the idea of Lock-Free Deduplication.",
   "tipi_version": 2,
-  "version": "v1.0.0",
-  "source": "https://github.com/stashapp/stash",
+  "version": "v1.0.1",
+  "source": "https://github.com/gilbertchen/duplicacy",
   "exposable": true,
   "supported_architectures": [
     "arm64",
-    "arm32",
     "amd64"
   ],
   "created_at": 1745082405284,

@@ -10,12 +10,11 @@
   ],
   "description": "Stash is a self-hosted webapp written in Go which organizes and serves your porn.",
   "tipi_version": 2,
-  "version": "v1.0.0",
+  "version": "v1.0.1",
   "source": "https://github.com/stashapp/stash",
   "exposable": true,
   "supported_architectures": [
     "arm64",
-    "arm32",
     "amd64"
   ],
   "created_at": 1745082405284,
