@@ -3,19 +3,19 @@
       {
         "name": "stash",
         "image": "stashapp/stash:latest",
-        "isMain": true,
-        "internalPort": "8080",
         "environment": {
-            "STASH_STASH": "/data/",
-            "STASH_GENERATED": "/generated/",
-            "STASH_METADATA": "/metadata/",
-            "STASH_CACHE": "/cache/",
-            "STASH_PORT": "${APP_PORT}"
+          "STASH_STASH": "/data/",
+          "STASH_GENERATED": "/generated/",
+          "STASH_METADATA": "/metadata/",
+          "STASH_CACHE": "/cache/",
+          "STASH_PORT": "${APP_PORT}"
         },
+        "internalPort": 9999,
         "volumes": [
           {
             "hostPath": "/etc/localtime",
-            "containerPath": "/etc/localtime:ro"
+            "containerPath": "/etc/localtime",
+            "readOnly": true
           },
           {
             "hostPath": "${APP_DATA_DIR}/config",
@@ -42,16 +42,13 @@
             "containerPath": "/generated"
           }
         ],
-        "logging":
-        {
-            "driver": "json-file",
-            "options":
-              {
-                "max-file": "10",
-                "max-size": "2m"
-              }
+        "logging": {
+          "driver": "json-file",
+          "options": {
+            "max-file": "10",
+            "max-size": "2m"
+          }
         }
       }
     ]
-  }
-  
+}
