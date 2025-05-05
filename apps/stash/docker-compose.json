@@ -10,7 +10,7 @@
           "STASH_CACHE": "/cache/",
           "STASH_PORT": "${APP_PORT}"
         },
-        "internalPort": 9999,
+        "internalPort": "${APP_PORT}",
         "volumes": [
           {
             "hostPath": "/etc/localtime",
