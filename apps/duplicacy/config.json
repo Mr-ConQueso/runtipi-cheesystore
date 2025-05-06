@@ -4,14 +4,14 @@
   "available": true,
   "short_desc": "A new generation cloud backup tool.",
   "author": "gilbertchen",
-  "port": 3875,
+  "port": 3999,
   "categories": [
     "utilities",
     "data"
   ],
   "description": "Duplicacy is a new generation cross-platform cloud backup tool based on the idea of Lock-Free Deduplication.",
-  "tipi_version": 3,
-  "version": "v1.0.3",
+  "tipi_version": 4,
+  "version": "v1.0.4",
   "source": "https://github.com/gilbertchen/duplicacy",
   "exposable": true,
   "supported_architectures": [
