@@ -10,8 +10,8 @@
     "data"
   ],
   "description": "SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.",
-  "tipi_version": 1,
-  "version": "v1.0.1",
+  "tipi_version": 2,
+  "version": "v1.0.2",
   "source": "https://github.com/searxng/searxng",
   "exposable": true,
   "supported_architectures": [

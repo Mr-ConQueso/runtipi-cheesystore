@@ -10,8 +10,8 @@
     "network"
   ],
   "description": "Twingate is an end-to-end private tunnel that allows connections to the local runtipi LAN.",
-  "tipi_version": 1,
-  "version": "v1.0.1",
+  "tipi_version": 2,
+  "version": "v1.0.2",
   "source": "https://github.com/Twingate",
   "exposable": true,
   "supported_architectures": [
