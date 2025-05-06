@@ -21,5 +21,30 @@
   "created_at": 1745082405284,
   "updated_at": 1745674974072,
   "dynamic_config": true,
-  "form_fields": []
+  "form_fields": [
+    {
+      "type": "fqdn",
+      "label": "Network",
+      "max": 50,
+      "min": 3,
+      "required": true,
+      "env_variable": "TWINGATE_NETWORK"
+    },
+    {
+      "type": "password",
+      "label": "Access Token",
+      "max": 1000,
+      "min": 40,
+      "required": true,
+      "env_variable": "TWINGATE_ACCESS_TOKEN"
+    },
+    {
+      "type": "password",
+      "label": "Refresh Token",
+      "max": 1000,
+      "min": 40,
+      "required": true,
+      "env_variable": "TWINGATE_REFRESH_TOKEN"
+    }
+  ]
 }
