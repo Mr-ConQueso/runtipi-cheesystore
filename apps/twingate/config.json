@@ -1,0 +1,25 @@
+{
+  "name": "Twingate",
+  "id": "twiingate",
+  "available": true,
+  "short_desc": "Twingate makes Zero Trust Network Access easy to deploy, even easier to use, and always secure.",
+  "author": "Twingate Labs",
+  "port": 3769,
+  "categories": [
+    "utilities",
+    "network"
+  ],
+  "description": "Twingate is an end-to-end private tunnel that allows connections to the local runtipi LAN.",
+  "tipi_version": 1,
+  "version": "v1.0.1",
+  "source": "https://github.com/Twingate",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1745082405284,
+  "updated_at": 1745674974072,
+  "dynamic_config": true,
+  "form_fields": []
+}
