@@ -1,12 +1,32 @@
-# Example App Store Template
+# Cheesy Store for Runtipi
 
-This repository serves as a template for creating your own custom app store for the Runtipi platform. Use this as a starting point to create and share your own collection of applications.
+A custom app store for the Runtipi platform featuring additional applications not found in the main repository.
+
+## Supported Applications
+
+- **[Duplicacy](https://duplicacy.com)**: Enterprise backup solution with client-side encryption and deduplication
+- **[Nginx Proxy Manager](https://nginxproxymanager.com)**: Easy-to-use nginx proxy management with SSL support
+- **[SearXNG](https://docs.searxng.org)**: Privacy-respecting metasearch engine
+- **[Stash](https://stashapp.cc)**: A self-hosted organizer for your media collections
+- **[Twingate](https://www.twingate.com)**: Modern Zero Trust remote access solution
+
+## Installation
+
+1. Open your Runtipi dashboard
+2. Navigate to Settings > App Stores
+3. Click "Add Custom App Store"
+4. Enter the following information:
+   - Name: Cheesy Store
+   - URL: `https://raw.githubusercontent.com/YOUR_USERNAME/runtipi-cheesystore/main`
+   - Branch: main
+5. Click "Add Store"
+
+The custom apps will now appear in your Runtipi app catalog, ready to install.
 
 ## Repository Structure
 
 - **apps/**: Contains individual app directories
-
-  - Each app has its own folder (e.g., `whoami/`) with the following structure:
+  - Each app has its own folder with the following structure:
     - `config.json`: App configuration file
     - `docker-compose.json`: Docker setup for the app
     - `metadata/`: Contains app visuals and descriptions
@@ -14,18 +34,13 @@ This repository serves as a template for creating your own custom app store for 
       - `logo.jpg`: App logo image
 
 - **tests/**: Contains test files for the app store
-
   - `apps.test.ts`: Test suite for validating apps
-
-## Getting Started
-
-This repository is intended to serve as a template for creating your own app store. Follow these steps to get started:
-
-1. Click the "Use this template" button to create a new repository based on this template
-2. Customize the apps or add your own app folders in the `apps/` directory
-3. Test your app store by using it with Runtipi
 
 ## Documentation
 
 For detailed instructions on creating your own app store, please refer to the official guide:
 [Create Your Own App Store Guide](https://runtipi.io/docs/guides/create-your-own-app-store)
+
+## Contributing
+
+Feel free to contribute by submitting pull requests with new applications or improvements to existing ones.
