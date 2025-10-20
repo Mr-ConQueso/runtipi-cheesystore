@@ -2,7 +2,7 @@
   "$schema": "../dynamic-compose-schema.json",
   "services": [
     {
-      "name": "app",
+      "name": "nginx-proxy-manager",
       "image": "jc21/nginx-proxy-manager:v2.12.3",
       "isMain": true,
       "internalPort": 80,

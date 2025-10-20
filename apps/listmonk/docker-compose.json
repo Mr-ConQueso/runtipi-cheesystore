@@ -1,0 +1,69 @@
+{
+  "services": [
+    {
+      "name": "listmonk_app",
+      "image": "listmonk/listmonk:latest",
+      "command": [
+        "sh",
+        "-c",
+        "./listmonk --install --idempotent --yes --config '' && ./listmonk --upgrade --yes --config '' && ./listmonk --config ''"
+      ],
+      "environment": {
+        "LISTMONK_app__address": "0.0.0.0:9000",
+        "LISTMONK_db__user": "listmonk",
+        "LISTMONK_db__password": "listmonk",
+        "LISTMONK_db__database": "listmonk",
+        "LISTMONK_db__host": "listmonk_db",
+        "LISTMONK_db__port": 5432,
+        "LISTMONK_db__ssl_mode": "disable",
+        "LISTMONK_db__max_open": 25,
+        "LISTMONK_db__max_idle": 25,
+        "LISTMONK_db__max_lifetime": "300s",
+        "TZ": "Etc/UTC",
+        "LISTMONK_ADMIN_USER": "${LISTMONK_ADMIN_USER:-}",
+        "LISTMONK_ADMIN_PASSWORD": "${LISTMONK_ADMIN_PASSWORD:-}"
+      },
+      "internalPort": 9000,
+      "volumes": [
+        {
+          "hostPath": "./uploads",
+          "containerPath": "/listmonk/uploads",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        }
+      ],
+      "hostname": "listmonk.example.com",
+      "dependsOn": {
+        "db": {
+          "condition": "service_started"
+        }
+      }
+    },
+    {
+      "name": "listmonk_db",
+      "image": "postgres:17-alpine",
+      "environment": {
+        "POSTGRES_USER": "listmonk",
+        "POSTGRES_PASSWORD": "listmonk",
+        "POSTGRES_DB": "listmonk"
+      },
+      "internalPort": 5432,
+      "volumes": [
+        {
+          "hostPath": "listmonk-data",
+          "containerPath": "/var/lib/postgresql/data",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        }
+      ],
+      "healthCheck": {
+        "test": "pg_isready -U listmonk",
+        "interval": "10s",
+        "timeout": "5s",
+        "retries": 6
+      }
+    }
+  ]
+}
