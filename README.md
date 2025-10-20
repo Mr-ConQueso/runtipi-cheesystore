@@ -7,7 +7,7 @@ A custom app store for the Runtipi platform featuring additional applications no
 - **[Duplicacy](https://duplicacy.com)**: Enterprise backup solution with client-side encryption and deduplication
 - **[Nginx Proxy Manager](https://nginxproxymanager.com)**: Easy-to-use nginx proxy management with SSL support
 - **[SearXNG](https://docs.searxng.org)**: Privacy-respecting metasearch engine
-- **[Stash](https://stashapp.cc)**: A self-hosted organizer for your media collections
+- **[Stash](https://stashapp.cc)**: A self-hosted organizer for your adult media collections
 - **[Twingate](https://www.twingate.com)**: Modern Zero Trust remote access solution
 
 ## Installation
@@ -17,7 +17,7 @@ A custom app store for the Runtipi platform featuring additional applications no
 3. Click "Add Custom App Store"
 4. Enter the following information:
    - Name: Cheesy Store
-   - URL: `https://raw.githubusercontent.com/YOUR_USERNAME/runtipi-cheesystore/main`
+   - URL: `https://github.com/Mr-ConQueso/runtipi-cheesystore`
    - Branch: main
 5. Click "Add Store"
 
