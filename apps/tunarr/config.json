@@ -1,0 +1,24 @@
+{
+  "name": "Tunarr",
+  "id": "tunarr",
+  "available": true,
+  "short_desc": "Create a classic TV experience using your own media - IPTV backed by Plex/Jellyfin/Emby",
+  "author": "chrisbenincasa",
+  "port": 8000,
+  "categories": [
+    "media"
+  ],
+  "description": "Create live TV channels from media on your Plex/Jellyfin servers, and more! Configure your channels, programs, commercials, and settings using the Tunarr web UI. Watch your channels by adding the spoofed Tunarr HDHomerun tuner to Plex, Jellyfin, or Emby. Or utilize generated M3U files with any 3rd party IPTV player app.",
+  "tipi_version": 2,
+  "version": "v1.0.0",
+  "source": "https://github.com/chrisbenincasa/tunarr",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1745082405284,
+  "updated_at": 1745674974072,
+  "dynamic_config": true,
+  "form_fields": []
+}

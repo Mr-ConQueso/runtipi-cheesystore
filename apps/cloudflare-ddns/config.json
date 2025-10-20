@@ -1,0 +1,25 @@
+{
+  "name": "Cloudflare DDNS",
+  "id": "cloudflare-ddns",
+  "available": true,
+  "short_desc": "Dynamic DNS (DDNS) service based on Cloudflare",
+  "author": "timothymiller",
+  "port": 80,
+  "categories": [
+    "utilities",
+    "network"
+  ],
+  "description": "Dynamic DNS (DDNS) service based on Cloudflare! Access your home network remotely via a custom domain name without a static IP! ",
+  "tipi_version": 2,
+  "version": "v1.0.0",
+  "source": "https://github.com/timothymiller/cloudflare-ddns",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1745082405284,
+  "updated_at": 1745674974072,
+  "dynamic_config": true,
+  "form_fields": []
+}

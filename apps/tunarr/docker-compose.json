@@ -1,0 +1,22 @@
+{
+  "services": [
+    {
+      "name": "tunarr",
+      "image": "chrisbenincasa/tunarr:latest",
+      "environment": {
+        "LOG_LEVEL": "${TUNARR_LOG_LEVEL:-INFO}",
+        "TZ": "America/New_York"
+      },
+      "internalPort": 8000,
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/config",
+          "containerPath": "/config/tunarr",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        }
+      ]
+    }
+  ]
+}

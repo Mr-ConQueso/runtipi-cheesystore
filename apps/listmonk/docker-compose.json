@@ -26,7 +26,7 @@
       "internalPort": 9000,
       "volumes": [
         {
-          "hostPath": "./uploads",
+          "hostPath": "${APP_DATA_DIR}/uploads",
           "containerPath": "/listmonk/uploads",
           "readOnly": false,
           "shared": false,
@@ -51,7 +51,7 @@
       "internalPort": 5432,
       "volumes": [
         {
-          "hostPath": "listmonk-data",
+          "hostPath": "${APP_DATA_DIR}/db",
           "containerPath": "/var/lib/postgresql/data",
           "readOnly": false,
           "shared": false,
