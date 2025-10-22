@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "jellysearch",
+      "image": "domistyle/jellysearch",
+      "environment": [
+        {
+          "key": "MEILI_MASTER_KEY",
+          "value": "1234"
+        },
+        {
+          "key": "INDEX_CRON",
+          "value": "0 0 0/2 ? * * *"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/config",
+          "containerPath": "/config",
+          "readOnly": true,
+          "shared": false,
+          "private": false
+        }
+      ],
+      "extraLabels": {
+        "0": "traefik.enable=true",
+        "1": "traefik.http.services.jellysearch.loadbalancer.server.port=5000",
+        "2": "traefik.http.routers.jellysearch.rule=Host(`demo.jellyfin.org`) && (QueryRegexp(`searchTerm`, `(.*?)`) || QueryRegexp(`SearchTerm`, `(.*?)`))"
+      }
+    },
+    {
+      "name": "meilisearch",
+      "image": "getmeili/meilisearch:v1.9",
+      "environment": [
+        {
+          "key": "MEILI_MASTER_KEY",
+          "value": "1234"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/meilisearch",
+          "containerPath": "/meili_data",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        }
+      ]
+    }
+  ]
+}

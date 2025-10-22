@@ -1,0 +1,25 @@
+{
+  "name": "JellySearch",
+  "id": "jellysearch",
+  "available": true,
+  "short_desc": "A fast full-text search proxy for Jellyfin. Integrates seamlessly with most Jellyfin clients.",
+  "author": "DomiStyle",
+  "port": 5000,
+  "categories": [
+    "media",
+    "utilities"
+  ],
+  "description": "A fast full-text search proxy for Jellyfin. Integrates seamlessly with most Jellyfin clients.",
+  "tipi_version": 2,
+  "version": "v1.0.0",
+  "source": "https://gitlab.com/DomiStyle/jellysearch/",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1745082405284,
+  "updated_at": 1745674974072,
+  "dynamic_config": true,
+  "form_fields": []
+}
