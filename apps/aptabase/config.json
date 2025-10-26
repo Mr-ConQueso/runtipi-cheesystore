@@ -1,0 +1,24 @@
+{
+  "name": "Aptabase",
+  "id": "aptabase",
+  "available": true,
+  "short_desc": "✨ Open Source, Privacy-First and Simple Analytics for Mobile, Desktop and Web Apps",
+  "author": "goenning",
+  "port": 8898,
+  "categories": [
+    "utilities"
+  ],
+  "description": "Aptabase is an open-source alternative to Firebase/Google Analytics, specifically built for Mobile, Desktop and Web apps.",
+  "tipi_version": 6,
+  "version": "v1.0.1",
+  "source": "https://github.com/aptabase/aptabase",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1745082405284,
+  "updated_at": 1745674974072,
+  "dynamic_config": true,
+  "form_fields": []
+}
